@@ -26,7 +26,9 @@ jobs:
         
         
       - name : Installing yarn
-        uses: npm install yarn 
+        uses: 
+              sudo apt install npm
+              npm install yarn 
          
       - name : Install surge
         uses: npm install surge
