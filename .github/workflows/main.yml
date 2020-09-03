@@ -1,4 +1,3 @@
-# This is a basic workflow to help you get started with Actions
 
 name: CI
 
@@ -7,7 +6,7 @@ name: CI
 on:
   push:
     branches: [ master ]
-    
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -18,17 +17,13 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-        # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      
-      - name: Installing Node JS
-        uses: actions/setup-node@v2
         
-        
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v1.4.3
+                
       - name : Installing yarn
-        uses: 
-              sudo apt install npm
-              npm install yarn 
+        uses: npm install -g yarn 
          
       - name : Install surge
         uses: npm install surge
