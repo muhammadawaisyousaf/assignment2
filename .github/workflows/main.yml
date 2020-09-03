@@ -26,10 +26,10 @@ jobs:
         
         
       - name : Installing yarn
-        uses: npm install -g yarn 
+        uses: npm install yarn 
          
       - name : Install surge
-        uses: npm install -g surge
+        uses: npm install surge
       
       - name : Create build
         uses: yarn build ./
