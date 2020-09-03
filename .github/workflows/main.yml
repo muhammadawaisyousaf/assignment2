@@ -26,8 +26,6 @@ jobs:
       - name: Installing Node JS
         uses: actions/setup-node@v1.4.3
         
-      - name : Installing Create-React-App
-        uses: npm install -g  create-react-app
       - name : Installing yarn
         uses: npm install -g yarn 
          
